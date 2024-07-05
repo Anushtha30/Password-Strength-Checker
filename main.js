@@ -13,8 +13,11 @@ document.getElementById('password').addEventListener('input', function() {
 });
 
 function getPasswordStrength(password) {
-  let strength = { text: 'Weak', class: 'weak', width: '25%' };
+  let strength = { text: 'Very Weak', class: 'very-weak', width: '5%' };
 
+  if (password.length > 8) {
+      strength = { text: 'Weak', class: 'weak', width: '25%%' };
+  }
   if (password.length > 8) {
       strength = { text: 'Medium', class: 'medium', width: '50%' };
   }
